@@ -1,3 +1,4 @@
+import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 
 import { articleMock } from "../../tests/mocks";
@@ -16,5 +17,16 @@ describe("Article", () => {
       "href",
       articleMock.url
     );
+  });
+
+  it("renders no author line, if no author provided", () => {
+    const articleWithoutAuthor = {
+      title: articleMock.title,
+      description: articleMock.description,
+      url: articleMock.url,
+    };
+    render(<Article article={articleWithoutAuthor} />);
+
+    expect(screen.queryByText("by")).not.toBeInTheDocument();
   });
 });
