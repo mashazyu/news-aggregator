@@ -6,4 +6,4 @@ export function cn(...inputs) {
 }
 
 export const filterRemovedArticles = (array) =>
-  array.filter(({ title }) => !title.includes("Removed"));
+  array.filter(({ title }) => !title.includes("[Removed]"));
