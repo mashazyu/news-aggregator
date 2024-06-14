@@ -17,7 +17,7 @@ function Article({ article }) {
     <Card className="flex flex-col justify-between">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
-        <CardDescription>by {author}</CardDescription>
+        {author && <CardDescription>by {author}</CardDescription>}
       </CardHeader>
       <CardContent>
         <p>{description}</p>
