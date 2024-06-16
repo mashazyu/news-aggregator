@@ -1,9 +1,13 @@
 import axios from "axios";
 
-export const getArticles = async () => {
+const PAGE_SIZE = 9;
+const ENDPOINT = "https://newsapi.org/v2/top-headlines?country=de";
+const API_KEY = "apiKey";
+
+export const getArticles = async ({ category, query }) => {
   const { data } = await axios.get(
-    "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=apiKey"
+    `${ENDPOINT}&q=${query}&category=${category}&pageSize=${PAGE_SIZE}&apiKey=${API_KEY}`
   );
-  console.log("// data in getArticles ", data);
+
   return data;
 };
