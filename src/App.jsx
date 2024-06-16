@@ -11,18 +11,22 @@ function App() {
   const [category, setCategory] = useState(CATEGORIES[0]);
   const [query, setQuery] = useState("");
 
-  const handleChange = (e) => {
+  const handleInputChange = (e) => {
     setQuery(e.target.value);
+  };
+  const handleCategoryChange = (cat) => {
+    setCategory(cat);
+    setQuery("");
   };
 
   return (
     <main className="container mx-auto py-8">
       <Input
         value={query}
-        onChange={handleChange}
+        onChange={handleInputChange}
         placeholder="Filter your news"
       />
-      <Toggle category={category} setCategory={setCategory} />
+      <Toggle category={category} setCategory={handleCategoryChange} />
       <Separator />
       <Articles category={category} query={query} />
     </main>
