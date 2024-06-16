@@ -3,7 +3,7 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 import { CATEGORIES } from "../constants";
 
-function CategoryToggle({ category, setCategory }) {
+function Toggle({ category, setCategory }) {
   return (
     <div className="flex py-8">
       <ToggleGroup
@@ -22,9 +22,9 @@ function CategoryToggle({ category, setCategory }) {
   );
 }
 
-CategoryToggle.propTypes = {
+Toggle.propTypes = {
   category: PropTypes.string.isRequired,
-  setCategory: PropTypes.func,
+  setCategory: PropTypes.func.isRequired,
 };
 
-export default CategoryToggle;
+export default Toggle;
