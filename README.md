@@ -6,7 +6,7 @@ This repository contains a news feed.
 
 The following techstack is used:
 
-- [Vite](https://vitejs.dev/guide/) + JS + React to present the information
+- [Vite](https://vitejs.dev/guide/) + JS + React + [shadcn/ui](https://ui.shadcn.com/) to present the information
 - [TanStack Query](https://tanstack.com/query/latest) to pull the information from [News API](https://newsapi.org/docs/endpoints/top-headlines)
 - [Vitest](https://vitest.dev/) + [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) + [Nock](https://github.com/nock/nock) for testing
 
