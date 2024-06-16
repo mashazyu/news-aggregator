@@ -1,13 +1,20 @@
 import axios from "axios";
 
-const PAGE_SIZE = 9;
-const ENDPOINT = "https://newsapi.org/v2/top-headlines?country=de";
-const API_KEY = "apiKey";
+import { PAGE_SIZE, ENDPOINT, API_KEY } from "../constants";
 
 export const getArticles = async ({ category, query }) => {
-  const { data } = await axios.get(
-    `${ENDPOINT}&q=${query}&category=${category}&pageSize=${PAGE_SIZE}&apiKey=${API_KEY}`
-  );
+  const url = new URL(ENDPOINT);
+  const params = new URLSearchParams({
+    country: "de",
+    pageSize: PAGE_SIZE,
+    apiKey: API_KEY,
+    q: query,
+    category: category,
+  });
+
+  url.search = params.toString();
+
+  const { data } = await axios.get(url);
 
   return data;
 };
