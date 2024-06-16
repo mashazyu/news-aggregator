@@ -9,7 +9,7 @@ import { CATEGORIES } from "./constants";
 
 function App() {
   const [category, setCategory] = useState(CATEGORIES[0]);
-  const [query, setQuery] = useState();
+  const [query, setQuery] = useState("");
 
   const handleChange = (e) => {
     setQuery(e.target.value);

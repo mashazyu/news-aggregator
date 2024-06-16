@@ -30,7 +30,7 @@ function Articles({ category, query }) {
 
 Articles.propTypes = {
   category: PropTypes.string.isRequired,
-  query: PropTypes.string.isRequired,
+  query: PropTypes.string,
 };
 
 export default Articles;
