@@ -19,7 +19,7 @@ nock("https://newsapi.org")
     error: null,
   });
 
-describe("App", () => {
+describe("Articles", () => {
   it("renders articles", async () => {
     render(<Articles category="business" query="" />, { wrapper });
 
