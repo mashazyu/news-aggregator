@@ -26,7 +26,11 @@ function App() {
         onChange={handleInputChange}
         placeholder="Filter your news"
       />
-      <Toggle category={category} setCategory={handleCategoryChange} />
+      <Toggle
+        option={category}
+        setOption={handleCategoryChange}
+        options={CATEGORIES}
+      />
       <Separator />
       <Articles category={category} query={query} />
     </main>
