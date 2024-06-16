@@ -8,14 +8,14 @@ import Toggle from "./components/Toggle";
 import { CATEGORIES } from "./constants";
 
 function App() {
-  const [category, setCategory] = useState(CATEGORIES[0]);
+  const [currentCategory, setCurrentCategory] = useState(CATEGORIES[0]);
   const [query, setQuery] = useState("");
 
   const handleInputChange = (e) => {
     setQuery(e.target.value);
   };
-  const handleCategoryChange = (cat) => {
-    setCategory(cat);
+  const handleCategoryChange = (category) => {
+    setCurrentCategory(category);
     setQuery("");
   };
 
@@ -27,12 +27,12 @@ function App() {
         placeholder="Filter your news"
       />
       <Toggle
-        option={category}
+        option={currentCategory}
         setOption={handleCategoryChange}
         options={CATEGORIES}
       />
       <Separator />
-      <Articles category={category} query={query} />
+      <Articles category={currentCategory} query={query} />
     </main>
   );
 }

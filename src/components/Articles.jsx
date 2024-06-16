@@ -16,11 +16,12 @@ function Articles({ category, query }) {
   if (isLoading) return <h1>loading...</h1>;
   if (isError) return <h1>{JSON.stringify(error)}</h1>;
 
-  // Some articles might be removed, so I filter those articles out
+  // Api returns entries with [Removed] in title and content.
+  // Below I am filtering out those entries.
   const articles = filterRemovedArticles(data.articles);
 
   return (
-    <div className="grid grid-cols-3 gap-8 py-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-8">
       {articles.map((article) => (
         <Article article={article} key={article.title} />
       ))}
