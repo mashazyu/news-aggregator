@@ -1,8 +1,34 @@
-# React + Vite
+# News Feed
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains a news feed.
 
-Currently, two official plugins are available:
+![UI](image.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The following techstack is used:
+
+- [Vite](https://vitejs.dev/guide/) + JS + React to present the information
+- [TanStack Query](https://tanstack.com/query/latest) to pull the information from [News API](https://newsapi.org/docs/endpoints/top-headlines)
+- [Vitest](https://vitest.dev/) + [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) + [Nock](https://github.com/nock/nock) for testing
+
+## Setup
+
+To run app locally, please
+
+1. Clone the current repo.
+2. Generate an API key for [News API](https://newsapi.org/docs/endpoints/top-headlines) and specify it as an API_KEY const in `src/constants.js` file
+3. Run in your terminal
+
+```
+npm i
+npm run dev
+```
+
+4. Navigate http://127.0.0.1:5173/ in your browser.
+
+## Tests
+
+To start tests locally, please run
+
+```
+npm run test
+```
