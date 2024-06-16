@@ -9,6 +9,7 @@ function Toggle({ option, setOption, options }) {
         variant="outline"
         value={option}
         onValueChange={setOption}
+        className="flex-wrap justify-start"
       >
         {options.map((cat) => (
           <ToggleGroupItem key={cat} value={cat}>
