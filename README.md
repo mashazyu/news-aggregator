@@ -1,6 +1,6 @@
 # News Feed
 
-This repository contains a news feed.
+This repository contains a news feed application. News articles are retrieved from the News API. Users can filter news by keyword or category.
 
 ![UI](image.png)
 

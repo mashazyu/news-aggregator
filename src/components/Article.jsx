@@ -23,7 +23,7 @@ function Article({ article }) {
         <p>{description}</p>
       </CardContent>
       <CardFooter>
-        <Button asChild>
+        <Button asChild variant="secondary">
           <a href={url} target="_blank">
             Learn more
           </a>
