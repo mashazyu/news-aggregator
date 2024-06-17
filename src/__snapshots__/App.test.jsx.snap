@@ -149,7 +149,6 @@ exports[`App > renders articles 1`] = `
     >
       Load More
     </button>
-    <div />
   </main>
 </DocumentFragment>
 `;

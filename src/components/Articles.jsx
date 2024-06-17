@@ -2,7 +2,10 @@ import PropTypes from "prop-types";
 import { useInfiniteQuery } from "@tanstack/react-query";
 
 import { Button } from "./ui/button";
+
 import Article from "./Article";
+import Loader from "./Loader";
+
 import { getArticles } from "../api/articles";
 import { filterRemovedArticles } from "../lib/utils";
 
@@ -14,7 +17,6 @@ function Articles({ category, query }) {
     error,
     fetchNextPage,
     hasNextPage,
-    isFetching,
     isFetchingNextPage,
     status,
   } = useInfiniteQuery({
@@ -30,9 +32,13 @@ function Articles({ category, query }) {
   });
 
   return status === "pending" ? (
-    <p>Loading...</p>
+    <Loader />
   ) : status === "error" ? (
-    <p>Error: {error.message}</p>
+    <div className="pt-16">
+      <p className="error-message text-sm text-red-500 mt-1">
+        Error: {error.message}
+      </p>
+    </div>
   ) : (
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-8">
@@ -54,7 +60,6 @@ function Articles({ category, query }) {
           {isFetchingNextPage ? "Loading more..." : "Load More"}
         </Button>
       )}
-      <div>{isFetching && !isFetchingNextPage ? "Fetching..." : null}</div>
     </>
   );
 }
