@@ -3,7 +3,7 @@ import { render, screen, waitFor } from "@testing-library/react";
 import nock from "nock";
 
 import { wrapper } from "../../tests/utils";
-import { articleMock } from "../../tests/mocks";
+import { articlesMock as articles } from "../../tests/mocks";
 import Articles from "./Articles";
 
 nock("https://newsapi.org")
@@ -13,7 +13,7 @@ nock("https://newsapi.org")
   })
   .get((uri) => uri.includes("/v2/top-headlines"))
   .reply(200, {
-    articles: [articleMock, articleMock, articleMock],
+    articles,
     isLoading: false,
     isError: false,
     error: null,
@@ -24,5 +24,7 @@ describe("Articles", () => {
     render(<Articles category="business" query="" />, { wrapper });
 
     await waitFor(() => expect(screen.getAllByText("Title")).toHaveLength(3));
+    expect(screen.getByText("Load More")).toBeInTheDocument();
+    expect(screen.queryByText("Loading more...")).not.toBeInTheDocument();
   });
 });
