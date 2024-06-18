@@ -7,7 +7,6 @@ export const getArticles = async ({ category, page, query }) => {
   const params = new URLSearchParams({
     country: "de",
     pageSize: PAGE_SIZE,
-    apiKey: API_KEY,
     q: query,
     category,
     page,
@@ -15,7 +14,11 @@ export const getArticles = async ({ category, page, query }) => {
 
   url.search = params.toString();
 
-  const { data } = await axios.get(url);
+  const { data } = await axios.get(url, {
+    headers: {
+      "X-Api-Key": API_KEY,
+    },
+  });
 
   return data;
 };
