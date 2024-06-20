@@ -10,9 +10,8 @@ vi.spyOn(axios, "get").mockImplementation(() =>
   Promise.resolve({
     data: {
       articles: [articleMock],
-      isLoading: false,
-      isError: false,
-      error: null,
+      status: "ok",
+      totalResults: 1,
     },
   })
 );
