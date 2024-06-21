@@ -1,14 +1,25 @@
 # News Feed
 
-This repository contains a news feed application. News articles are retrieved from the News API. Users can filter news by keyword or category.
+This repository contains a dynamic news feed application that retrieves articles from the News API. Users can easily filter news by keyword or category, providing a customizable reading experience.
 
 ![UI](image.png)
 
-The following techstack is used:
+## Key Features
+
+- Real-time news retrieval from News API
+- Keyword-based search functionality
+- Category filtering options
+- Testing
+
+## Tech Stack
 
 - [Vite](https://vitejs.dev/guide/) + JS + React + [shadcn/ui](https://ui.shadcn.com/) to present the information
 - [TanStack Query](https://tanstack.com/query/latest) to pull the information from [News API](https://newsapi.org/docs/endpoints/top-headlines)
-- [Vitest](https://vitest.dev/) + [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) + [Nock](https://github.com/nock/nock) for testing
+- [Vitest](https://vitest.dev/) + [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) and @vitest/coverage-v8 for testing
+
+## Current Status
+
+This project is actively under development. Regular updates and improvements are being made to enhance functionality and user experience.
 
 ## Setup
 
@@ -31,4 +42,10 @@ To start tests locally, please run
 
 ```
 npm run test
+```
+
+To check test coverage, please run
+
+```
+npm run test:coverage
 ```
