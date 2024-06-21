@@ -1,17 +1,38 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen, waitFor } from "@testing-library/react";
+import { useInfiniteQuery } from "@tanstack/react-query";
 
 import { wrapper } from "../../tests/utils";
-import { mockAPIResponse } from "../../tests/mocks";
+import { articlesMock } from "../../tests/mocks";
 import Articles from "./Articles";
-import axios from "axios";
 
-const spy = vi.spyOn(axios, "get");
+vi.mock("@tanstack/react-query", async () => {
+  const actual = await vi.importActual("@tanstack/react-query");
+  return {
+    ...actual,
+    useInfiniteQuery: vi.fn(),
+  };
+});
+
+const data = {
+  pages: [
+    {
+      status: "ok",
+      totalResults: 3,
+      articles: [...articlesMock],
+    },
+  ],
+};
 
 describe("Articles", () => {
-  describe("are rendered", () => {
+  describe("are rendered without Load More button", () => {
     beforeEach(() => {
-      spy.mockImplementation(() => Promise.resolve({ ...mockAPIResponse }));
+      useInfiniteQuery.mockReturnValue({
+        data,
+        isFetchingNextPage: false,
+        hasNextPage: false,
+        fetchNextPage: vi.fn(),
+      });
 
       render(<Articles category="business" query="" />, { wrapper });
     });
@@ -35,33 +56,15 @@ describe("Articles", () => {
     });
   });
 
-  describe("and Load More button are rendered", () => {
-    beforeEach(() => {
-      spy.mockImplementation(() =>
-        Promise.resolve({
-          data: {
-            ...mockAPIResponse.data,
-            totalResults: 30,
-          },
-        })
-      );
-
-      render(<Articles category="business" query="" />, { wrapper });
-    });
-
-    it("when there are more articles to display", async () => {
-      // wait till articles are rendered
-      await waitFor(() =>
-        expect(screen.getAllByText(/title/i)).toHaveLength(3)
-      );
-
-      expect(screen.getByText("Load More")).toBeInTheDocument();
-    });
-  });
-
   describe("are not rendered", () => {
     beforeEach(() => {
-      spy.mockRejectedValue(new Error("Network error"));
+      useInfiniteQuery.mockReturnValue({
+        data: undefined,
+        isFetchingNextPage: false,
+        fetchNextPage: vi.fn(),
+        status: "error",
+        error: new Error("Network error"),
+      });
 
       render(<Articles category="business" query="" />, { wrapper });
     });
@@ -73,6 +76,40 @@ describe("Articles", () => {
       );
 
       expect(screen.queryByText(/title/i)).not.toBeInTheDocument();
+    });
+  });
+
+  describe("correct wording on button to load more article is rendered", () => {
+    it("when there are more articles to display and loading of the next page is finished", async () => {
+      useInfiniteQuery.mockReturnValue({
+        hasNextPage: true,
+        data,
+        isFetchingNextPage: false,
+        fetchNextPage: vi.fn(),
+      });
+
+      render(<Articles category="business" query="" />, { wrapper });
+      // wait till articles are rendered
+      await waitFor(() =>
+        expect(screen.getAllByText(/title/i)).toHaveLength(3)
+      );
+
+      expect(screen.getByText("Load More")).toBeInTheDocument();
+    });
+
+    it("when there are more articles to display and loading of the next page is in progress", async () => {
+      useInfiniteQuery.mockReturnValue({
+        hasNextPage: true,
+        data,
+        isFetchingNextPage: true,
+        fetchNextPage: vi.fn(),
+      });
+
+      render(<Articles category="business" query="" />, { wrapper });
+
+      await waitFor(() =>
+        expect(screen.getByText("Loading more...")).toBeInTheDocument()
+      );
     });
   });
 });
