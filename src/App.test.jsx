@@ -1,30 +1,73 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen, waitFor } from "@testing-library/react";
-import nock from "nock";
+import userEvent from "@testing-library/user-event";
+import axios from "axios";
 
 import { wrapper } from "../tests/utils";
 import { articleMock } from "../tests/mocks";
 import App from "./App";
 
-nock("https://newsapi.org")
-  .defaultReplyHeaders({
-    "access-control-allow-origin": "*",
-    "access-control-allow-credentials": "true",
+const spy = vi.spyOn(axios, "get");
+
+spy.mockImplementation(() =>
+  Promise.resolve({
+    data: {
+      articles: [articleMock],
+      status: "ok",
+      totalResults: 1,
+    },
   })
-  .get((uri) => uri.includes("/v2/top-headlines"))
-  .reply(200, {
-    articles: [articleMock],
-    isLoading: false,
-    isError: false,
-    error: null,
-  });
+);
+
+const getLastCalledURL = () => {
+  const lastCall = spy.mock.calls.at(-1);
+
+  return lastCall[0];
+};
 
 describe("App", () => {
-  it("renders articles", async () => {
+  it("renders articles with correct styling", async () => {
     const { asFragment } = render(<App />, { wrapper });
 
     await waitFor(() => expect(screen.getAllByText("Title")).toHaveLength(1));
 
     expect(asFragment()).toMatchSnapshot();
+  });
+
+  describe("sends correct API request", () => {
+    beforeEach(() => render(<App />, { wrapper }));
+
+    it("when search input changes", async () => {
+      const input = screen.getByRole("textbox");
+      await userEvent.type(input, "abc");
+
+      const url = getLastCalledURL();
+
+      await waitFor(() => {
+        // q search param is updated
+        expect(url.searchParams.has("q")).toBe(true);
+        expect(url.searchParams.get("q")).toBe("abc");
+        // input value is udpated
+        expect(input).toHaveValue("abc");
+      });
+    });
+
+    it("when category selection changes", async () => {
+      const category = screen.getByRole("radio", { name: /general/i });
+      await userEvent.click(category);
+
+      const url = getLastCalledURL();
+
+      await waitFor(() => {
+        // category search param is updated
+        expect(url.searchParams.has("category")).toBe(true);
+        expect(url.searchParams.get("category")).toBe("general");
+        // q param is set to '' on category change
+        expect(url.searchParams.has("q")).toBe(true);
+        expect(url.searchParams.get("q")).toBe("");
+        // category selection changes
+        expect(category).toBeChecked();
+      });
+    });
   });
 });
