@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`App > renders articles 1`] = `
+exports[`App > renders articles with correct styling 1`] = `
 <DocumentFragment>
   <main
     class="container mx-auto py-8"
