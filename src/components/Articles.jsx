@@ -35,7 +35,7 @@ function Articles({ category, query }) {
     <Loader />
   ) : status === "error" ? (
     <div className="pt-16">
-      <p className="error-message text-sm text-red-500 mt-1">
+      <p role="alert" className="error-message text-sm text-red-500 mt-1">
         Error: {error.message}
       </p>
     </div>
