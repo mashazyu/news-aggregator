@@ -25,7 +25,7 @@ const data = {
 };
 
 describe("Articles", () => {
-  describe("are rendered without Load More button", () => {
+  describe("are rendered", () => {
     beforeEach(() => {
       useInfiniteQuery.mockReturnValue({
         data,
@@ -79,7 +79,7 @@ describe("Articles", () => {
     });
   });
 
-  describe("correct wording on button to load more article is rendered", () => {
+  describe("correct wording on button to load more article is rendered,", () => {
     it("when there are more articles to display and loading of the next page is finished", async () => {
       useInfiniteQuery.mockReturnValue({
         hasNextPage: true,

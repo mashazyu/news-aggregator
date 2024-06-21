@@ -19,7 +19,7 @@ This repository contains a dynamic news feed application that retrieves articles
 
 ## Current Status
 
-This project is actively under development. Regular updates and improvements are being made to enhance functionality and user experience.
+This project is under development. Updates and improvements are being made to enhance functionality and user experience.
 
 ## Setup
 
