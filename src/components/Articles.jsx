@@ -7,9 +7,6 @@ import Article from "./Article";
 import Loader from "./Loader";
 
 import { getArticles } from "../api/articles";
-import { filterRemovedArticles } from "../lib/utils";
-
-import { PAGE_SIZE } from "../constants";
 
 function Articles({ category, query }) {
   const {
@@ -24,10 +21,8 @@ function Articles({ category, query }) {
     queryFn: ({ pageParam }) =>
       getArticles({ category, page: pageParam, query }),
     initialPageParam: 0,
-    getNextPageParam: (lastPage, pages) => {
-      if (lastPage.totalResults <= pages.length * PAGE_SIZE) return null;
-
-      return pages.length;
+    getNextPageParam: (lastPage) => {
+      return lastPage.nextPage;
     },
   });
 
@@ -41,14 +36,10 @@ function Articles({ category, query }) {
     </div>
   ) : (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 py-8">
         {data.pages.map((currentPage) => {
-          // Api returns entries with [Removed] in title and content.
-          // Below I am filtering out those entries.
-          const articles = filterRemovedArticles(currentPage.articles);
-
-          return articles.map((article) => (
-            <Article article={article} key={article.title} />
+          return currentPage.results.map((article) => (
+            <Article article={article} key={article.article_id} />
           ));
         })}
       </div>

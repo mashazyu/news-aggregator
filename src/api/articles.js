@@ -1,22 +1,22 @@
 import axios from "axios";
 
-import { PAGE_SIZE, ENDPOINT, API_KEY } from "../constants";
+import { ENDPOINT, API_KEY } from "../constants";
 
-export const getArticles = async ({ category, page, query: q }) => {
+export const getArticles = async ({ category, page, query }) => {
   const url = new URL(ENDPOINT);
   const params = new URLSearchParams({
-    country: "de",
-    pageSize: PAGE_SIZE,
-    q,
     category,
-    page,
+    country: "de",
   });
+
+  if (query) params.append("q", query);
+  if (page) params.append("page", page);
 
   url.search = params.toString();
 
   const { data } = await axios.get(url, {
     headers: {
-      "X-Api-Key": API_KEY,
+      "X-ACCESS-KEY": API_KEY,
     },
   });
 

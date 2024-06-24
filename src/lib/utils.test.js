@@ -1,18 +1,19 @@
 import { describe, it, expect } from "vitest";
 
-import { filterRemovedArticles } from "./utils";
+import { isCreatorAvailable } from "./utils";
 
-describe("filterRemovedArticles()", () => {
+describe("isCreatorAvailable()", () => {
   it.each`
-    articles                                                                      | filteredArticles
-    ${[{ title: "[Removed]" }, { title: "[Removed]" }]}                           | ${[]}
-    ${[{ title: "[Removed]" }, { title: "Removed" }]}                             | ${[{ title: "Removed" }]}
-    ${[]}                                                                         | ${[]}
-    ${[{ title: "Title with removed" }, { title: "Another title with Removed" }]} | ${[{ title: "Title with removed" }, { title: "Another title with Removed" }]}
+    creator        | result
+    ${null}        | ${false}
+    ${undefined}   | ${false}
+    ${[]}          | ${false}
+    ${[""]}        | ${false}
+    ${["creator"]} | ${true}
   `(
-    "filters $articles -> $filteredArticles",
-    ({ articles, filteredArticles }) => {
-      expect(filterRemovedArticles(articles)).toEqual(filteredArticles);
+    "if creator value is $creator, function returns $result",
+    ({ creator, result }) => {
+      expect(isCreatorAvailable(creator)).toEqual(result);
     }
   );
 });

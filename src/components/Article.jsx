@@ -10,21 +10,25 @@ import {
 } from "@/components/ui/card";
 import { Button } from "./ui/button";
 
+import { isCreatorAvailable } from "../lib/utils";
+
 function Article({ article }) {
-  const { author, title, description, url } = article;
+  const { description, link, creator, title } = article;
 
   return (
     <Card className="flex flex-col justify-between">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
-        {author && <CardDescription>by {author}</CardDescription>}
+        {isCreatorAvailable(creator) && (
+          <CardDescription>by {creator[0]}</CardDescription>
+        )}
       </CardHeader>
       <CardContent>
         <p>{description}</p>
       </CardContent>
       <CardFooter>
         <Button asChild variant="secondary">
-          <a href={url} target="_blank">
+          <a href={link} target="_blank">
             Learn more
           </a>
         </Button>
@@ -35,10 +39,10 @@ function Article({ article }) {
 
 Article.propTypes = {
   article: PropTypes.shape({
-    author: PropTypes.string,
+    creator: PropTypes.array,
     title: PropTypes.string,
     description: PropTypes.string,
-    url: PropTypes.string,
+    link: PropTypes.string,
   }).isRequired,
 };
 

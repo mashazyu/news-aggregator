@@ -5,5 +5,6 @@ export function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
 
-export const filterRemovedArticles = (array) =>
-  array.filter(({ title }) => !title.includes("[Removed]"));
+export const isCreatorAvailable = (creator) => {
+  return creator?.length > 0 && creator[0]?.length > 0;
+};

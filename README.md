@@ -1,8 +1,6 @@
 # News Feed
 
-This repository contains a dynamic news feed application that retrieves articles from the News API. Users can easily filter news by keyword or category, providing a customizable reading experience.
-
-![UI](image.png)
+This repository contains a dynamic news feed application that retrieves articles from the [NEWSDATA.IO](https://newsdata.io/). Users can easily filter news by keyword or category, providing a customizable reading experience. Current version of the app is deployed here - [https://mashazyu.github.io/news-aggregator/](https://mashazyu.github.io/news-aggregator/).
 
 ## Key Features
 
@@ -26,7 +24,7 @@ This project is under development. Updates and improvements are being made to en
 To run app locally, please
 
 1. Clone the current repo.
-2. Generate an API key for [News API](https://newsapi.org/docs/endpoints/top-headlines) and specify it as an API_KEY const in `src/constants.js` file
+2. Generate an API key for [NEWSDATA.IO API](https://newsdata.io/api-key) and specify it the local .env file.
 3. Run in your terminal
 
 ```
@@ -49,3 +47,7 @@ To check test coverage, please run
 ```
 npm run test:coverage
 ```
+
+## Deployment
+
+The app is automatically deployed to GitHub Pages when changes are pushed to the main branch.

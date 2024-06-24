@@ -1,8 +1,8 @@
 export const articleMock = {
-  author: "Author",
+  creator: ["Author"],
   title: "Title",
   description: "Description",
-  url: "https://mock.url",
+  link: "https://mock.url",
 };
 
 export const articlesMock = [
