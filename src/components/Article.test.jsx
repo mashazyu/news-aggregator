@@ -9,13 +9,13 @@ describe("Article", () => {
     render(<Article article={articleMock} />);
 
     expect(
-      screen.getByText(articleMock.author, { exact: false })
+      screen.getByText(articleMock.creator[0], { exact: false })
     ).toBeInTheDocument();
     expect(screen.getByText(articleMock.title)).toBeInTheDocument();
     expect(screen.getByText(articleMock.description)).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Learn more" })).toHaveAttribute(
       "href",
-      articleMock.url
+      articleMock.link
     );
   });
 

@@ -19,7 +19,7 @@ const data = {
     {
       status: "ok",
       totalResults: 3,
-      articles: [...articlesMock],
+      results: [...articlesMock],
     },
   ],
 };
