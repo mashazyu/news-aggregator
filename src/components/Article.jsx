@@ -22,7 +22,7 @@ function Article({ article }) {
     link,
     title,
   } = article;
-  console.log("// article ", article);
+
   return (
     <Card className="flex flex-col justify-between">
       <CardHeader>
@@ -36,9 +36,7 @@ function Article({ article }) {
           </Badge>
         )}
       </CardHeader>
-      <CardContent>
-        <p>{description}</p>
-      </CardContent>
+      <CardContent className="break-all">{description}</CardContent>
       <CardFooter>
         <Button asChild variant="secondary">
           <a href={link} target="_blank">
