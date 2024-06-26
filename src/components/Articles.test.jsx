@@ -17,7 +17,7 @@ vi.mock("@tanstack/react-query", async () => {
 const data = {
   pages: [
     {
-      status: "ok",
+      status: "success",
       totalResults: 3,
       results: [...articlesMock],
     },

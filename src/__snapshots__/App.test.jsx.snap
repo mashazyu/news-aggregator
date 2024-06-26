@@ -105,7 +105,7 @@ exports[`App > renders articles with correct styling 1`] = `
       role="none"
     />
     <div
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-8"
+      class="grid grid-cols-1 sm:grid-cols-2 gap-8 py-8"
     >
       <div
         class="rounded-lg border border-slate-200 bg-white text-slate-950 shadow-sm dark:border-slate-800 dark:bg-slate-950 dark:text-slate-50 flex flex-col justify-between"
@@ -116,7 +116,79 @@ exports[`App > renders articles with correct styling 1`] = `
           <h3
             class="text-2xl font-semibold leading-none tracking-tight"
           >
-            Title
+            Title 1
+          </h3>
+          <p
+            class="text-sm text-slate-500 dark:text-slate-400"
+          >
+            by Author
+          </p>
+        </div>
+        <div
+          class="p-6 pt-0"
+        >
+          <p>
+            Description
+          </p>
+        </div>
+        <div
+          class="flex items-center p-6 pt-0"
+        >
+          <a
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 bg-slate-100 text-slate-900 hover:bg-slate-100/80 dark:bg-slate-800 dark:text-slate-50 dark:hover:bg-slate-800/80 h-10 px-4 py-2"
+            href="https://mock.url"
+            target="_blank"
+          >
+            Learn more
+          </a>
+        </div>
+      </div>
+      <div
+        class="rounded-lg border border-slate-200 bg-white text-slate-950 shadow-sm dark:border-slate-800 dark:bg-slate-950 dark:text-slate-50 flex flex-col justify-between"
+      >
+        <div
+          class="flex flex-col space-y-1.5 p-6"
+        >
+          <h3
+            class="text-2xl font-semibold leading-none tracking-tight"
+          >
+            Title 2
+          </h3>
+          <p
+            class="text-sm text-slate-500 dark:text-slate-400"
+          >
+            by Author
+          </p>
+        </div>
+        <div
+          class="p-6 pt-0"
+        >
+          <p>
+            Description
+          </p>
+        </div>
+        <div
+          class="flex items-center p-6 pt-0"
+        >
+          <a
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 bg-slate-100 text-slate-900 hover:bg-slate-100/80 dark:bg-slate-800 dark:text-slate-50 dark:hover:bg-slate-800/80 h-10 px-4 py-2"
+            href="https://mock.url"
+            target="_blank"
+          >
+            Learn more
+          </a>
+        </div>
+      </div>
+      <div
+        class="rounded-lg border border-slate-200 bg-white text-slate-950 shadow-sm dark:border-slate-800 dark:bg-slate-950 dark:text-slate-50 flex flex-col justify-between"
+      >
+        <div
+          class="flex flex-col space-y-1.5 p-6"
+        >
+          <h3
+            class="text-2xl font-semibold leading-none tracking-tight"
+          >
+            Title 3
           </h3>
           <p
             class="text-sm text-slate-500 dark:text-slate-400"
