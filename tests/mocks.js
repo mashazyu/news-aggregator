@@ -1,4 +1,5 @@
 export const articleMock = {
+  article_id: "123",
   creator: ["Author"],
   title: "Title",
   description: "Description",
@@ -8,14 +9,17 @@ export const articleMock = {
 export const articlesMock = [
   {
     ...articleMock,
+    article_id: "123",
     title: "Title 1",
   },
   {
     ...articleMock,
+    article_id: "456",
     title: "Title 2",
   },
   {
     ...articleMock,
+    article_id: "789",
     title: "Title 3",
   },
 ];
