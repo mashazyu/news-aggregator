@@ -1,9 +1,15 @@
 export const articleMock = {
   article_id: "123",
+  category: ["sport"],
   creator: ["Author"],
-  title: "Title",
+  image_url: "https://image.url",
   description: "Description",
   link: "https://mock.url",
+  pubDate: "2023-02-30",
+  source_id: "sourceId",
+  source_icon: "sourceIcon",
+  source_url: "https://source.url",
+  title: "Title",
 };
 
 export const articlesMock = [
