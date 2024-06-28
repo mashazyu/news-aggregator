@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/card";
 import Source from "./Source";
 
-import { hoursAgo, getCreator } from "../lib/utils";
+import { hoursAgo, getCreator, limitChars } from "../lib/utils";
 
 function Article({ article }) {
   const {
@@ -53,7 +53,9 @@ function Article({ article }) {
       </CardHeader>
 
       <a href={link} target="_blank">
-        <CardContent className="break-all">{description}</CardContent>
+        <CardContent className="break-all">
+          {limitChars(description, 100)}
+        </CardContent>
       </a>
 
       <CardFooter>
