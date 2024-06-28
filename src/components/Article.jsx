@@ -8,10 +8,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Button } from "./ui/button";
 import { Badge } from "@/components/ui/badge";
 import Source from "./Source";
-import { isCreatorAvailable } from "../lib/utils";
+
+import { hoursAgo, getCreator } from "../lib/utils";
 
 function Article({ article }) {
   const {
@@ -20,6 +20,7 @@ function Article({ article }) {
     creator,
     description,
     link,
+    pubDate,
     source_id: sourceId,
     source_icon: sourceIcon,
     source_url: sourceUrl,
@@ -31,22 +32,20 @@ function Article({ article }) {
       <CardHeader>
         <Source id={sourceId} icon={sourceIcon} url={sourceUrl} />
         <CardTitle>{title}</CardTitle>
-        {isCreatorAvailable(creator) && (
-          <CardDescription>by {creator[0]}</CardDescription>
-        )}
         {category.length > 0 && (
           <Badge key={category + id} className="max-w-min">
             {category}
           </Badge>
         )}
       </CardHeader>
-      <CardContent className="break-all">{description}</CardContent>
+      <a href={link} target="_blank">
+        <CardContent className="break-all">{description}</CardContent>
+      </a>
       <CardFooter>
-        <Button asChild variant="secondary">
-          <a href={link} target="_blank">
-            Learn more
-          </a>
-        </Button>
+        <CardDescription>
+          {`${hoursAgo(pubDate)}`}
+          <span className="font-semibold">{`${getCreator(creator)}`}</span>
+        </CardDescription>
       </CardFooter>
     </Card>
   );
@@ -59,6 +58,7 @@ Article.propTypes = {
     creator: PropTypes.array,
     description: PropTypes.string,
     link: PropTypes.string,
+    pubDate: PropTypes.string,
     source_icon: PropTypes.string,
     source_id: PropTypes.string,
     source_url: PropTypes.string,
