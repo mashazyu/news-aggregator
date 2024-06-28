@@ -45,7 +45,7 @@ function Article({ article }) {
       <CardHeader>
         <Source id={sourceId} icon={sourceIcon} url={sourceUrl} />
         <CardTitle>{title}</CardTitle>
-        {category.length > 0 && (
+        {category?.length > 0 && (
           <Badge key={category + id} className="max-w-min">
             {category}
           </Badge>
