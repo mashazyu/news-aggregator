@@ -14,7 +14,7 @@ export const getCreator = (creator) => {
 };
 
 export const hoursAgo = (dateString) => {
-  if (!dateString) return "";
+  if (!dateString || isNaN(Date.parse(dateString))) return "";
 
   const eventDate = new Date(dateString);
   const now = new Date();
