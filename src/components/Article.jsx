@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 
+import { Badge } from "@/components/ui/badge";
 import {
   Card,
   CardContent,
@@ -8,7 +9,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import Source from "./Source";
 
 import { hoursAgo, getCreator } from "../lib/utils";
@@ -19,6 +19,7 @@ function Article({ article }) {
     category,
     creator,
     description,
+    image_url: imageUrl,
     link,
     pubDate,
     source_id: sourceId,
@@ -29,6 +30,18 @@ function Article({ article }) {
 
   return (
     <Card className="flex flex-col justify-between">
+      {imageUrl ? (
+        <img
+          src={imageUrl}
+          alt={title}
+          className="w-full h-[200px] object-cover"
+        />
+      ) : (
+        <div className="w-full h-[200px] bg-gray-200 flex items-center justify-center text-gray-500">
+          No image available
+        </div>
+      )}
+
       <CardHeader>
         <Source id={sourceId} icon={sourceIcon} url={sourceUrl} />
         <CardTitle>{title}</CardTitle>
@@ -38,9 +51,11 @@ function Article({ article }) {
           </Badge>
         )}
       </CardHeader>
+
       <a href={link} target="_blank">
         <CardContent className="break-all">{description}</CardContent>
       </a>
+
       <CardFooter>
         <CardDescription>
           {`${hoursAgo(pubDate)}`}
@@ -57,6 +72,7 @@ Article.propTypes = {
     category: PropTypes.array,
     creator: PropTypes.array,
     description: PropTypes.string,
+    image_url: PropTypes.string,
     link: PropTypes.string,
     pubDate: PropTypes.string,
     source_icon: PropTypes.string,
