@@ -39,10 +39,10 @@ function Article({ article }) {
         <img
           src={imageUrl}
           alt={title}
-          className="w-full h-[200px] object-cover"
+          className="w-full h-[200px] object-cover rounded-t-lg"
         />
       ) : (
-        <div className="w-full h-[200px] bg-gray-200 flex items-center justify-center text-gray-500">
+        <div className="w-full h-[200px] bg-gray-200 rounded-t-lg flex items-center justify-center text-gray-500">
           No image available
         </div>
       )}
