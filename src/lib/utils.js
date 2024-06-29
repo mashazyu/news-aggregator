@@ -26,7 +26,7 @@ export const hoursAgo = (dateString) => {
     : `${diffInMs / (1000 * 60)} minutes ago `;
 };
 
-export const limitChars = (text, limit = 100) => {
+export const limitChars = (text, limit = 150) => {
   if (!text) return "";
 
   return text.length > limit ? text.substring(0, limit) + "..." : text;

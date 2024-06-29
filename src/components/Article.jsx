@@ -59,7 +59,7 @@ function Article({ article }) {
 
       <a href={link} target="_blank">
         <CardContent className="break-all">
-          {limitChars(description, 100)}
+          {limitChars(description)}
         </CardContent>
       </a>
 
