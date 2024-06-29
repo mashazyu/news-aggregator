@@ -29,7 +29,51 @@ exports[`App > renders articles with correct styling 1`] = `
           tabindex="-1"
           type="button"
         >
+          TOP
+        </button>
+        <button
+          aria-checked="false"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-slate-100 data-[state=on]:text-slate-900 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:data-[state=on]:bg-slate-800 dark:data-[state=on]:text-slate-50 border border-slate-200 bg-transparent hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-3"
+          data-radix-collection-item=""
+          data-state="off"
+          role="radio"
+          tabindex="-1"
+          type="button"
+        >
           BUSINESS
+        </button>
+        <button
+          aria-checked="false"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-slate-100 data-[state=on]:text-slate-900 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:data-[state=on]:bg-slate-800 dark:data-[state=on]:text-slate-50 border border-slate-200 bg-transparent hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-3"
+          data-radix-collection-item=""
+          data-state="off"
+          role="radio"
+          tabindex="-1"
+          type="button"
+        >
+          CRIME
+        </button>
+        <button
+          aria-checked="false"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-slate-100 data-[state=on]:text-slate-900 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:data-[state=on]:bg-slate-800 dark:data-[state=on]:text-slate-50 border border-slate-200 bg-transparent hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-3"
+          data-radix-collection-item=""
+          data-state="off"
+          role="radio"
+          tabindex="-1"
+          type="button"
+        >
+          DOMESTIC
+        </button>
+        <button
+          aria-checked="false"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-slate-100 data-[state=on]:text-slate-900 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:data-[state=on]:bg-slate-800 dark:data-[state=on]:text-slate-50 border border-slate-200 bg-transparent hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-3"
+          data-radix-collection-item=""
+          data-state="off"
+          role="radio"
+          tabindex="-1"
+          type="button"
+        >
+          EDUCATION
         </button>
         <button
           aria-checked="false"
@@ -51,7 +95,18 @@ exports[`App > renders articles with correct styling 1`] = `
           tabindex="-1"
           type="button"
         >
-          GENERAL
+          ENVIRONMENT
+        </button>
+        <button
+          aria-checked="false"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-slate-100 data-[state=on]:text-slate-900 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:data-[state=on]:bg-slate-800 dark:data-[state=on]:text-slate-50 border border-slate-200 bg-transparent hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-3"
+          data-radix-collection-item=""
+          data-state="off"
+          role="radio"
+          tabindex="-1"
+          type="button"
+        >
+          FOOD
         </button>
         <button
           aria-checked="false"
@@ -63,6 +118,39 @@ exports[`App > renders articles with correct styling 1`] = `
           type="button"
         >
           HEALTH
+        </button>
+        <button
+          aria-checked="false"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-slate-100 data-[state=on]:text-slate-900 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:data-[state=on]:bg-slate-800 dark:data-[state=on]:text-slate-50 border border-slate-200 bg-transparent hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-3"
+          data-radix-collection-item=""
+          data-state="off"
+          role="radio"
+          tabindex="-1"
+          type="button"
+        >
+          LIFESTYLE
+        </button>
+        <button
+          aria-checked="false"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-slate-100 data-[state=on]:text-slate-900 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:data-[state=on]:bg-slate-800 dark:data-[state=on]:text-slate-50 border border-slate-200 bg-transparent hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-3"
+          data-radix-collection-item=""
+          data-state="off"
+          role="radio"
+          tabindex="-1"
+          type="button"
+        >
+          OTHER
+        </button>
+        <button
+          aria-checked="false"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-slate-100 data-[state=on]:text-slate-900 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:data-[state=on]:bg-slate-800 dark:data-[state=on]:text-slate-50 border border-slate-200 bg-transparent hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-3"
+          data-radix-collection-item=""
+          data-state="off"
+          role="radio"
+          tabindex="-1"
+          type="button"
+        >
+          POLITICS
         </button>
         <button
           aria-checked="false"
@@ -97,6 +185,28 @@ exports[`App > renders articles with correct styling 1`] = `
         >
           TECHNOLOGY
         </button>
+        <button
+          aria-checked="false"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-slate-100 data-[state=on]:text-slate-900 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:data-[state=on]:bg-slate-800 dark:data-[state=on]:text-slate-50 border border-slate-200 bg-transparent hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-3"
+          data-radix-collection-item=""
+          data-state="off"
+          role="radio"
+          tabindex="-1"
+          type="button"
+        >
+          TOURISM
+        </button>
+        <button
+          aria-checked="false"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-slate-100 data-[state=on]:text-slate-900 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:data-[state=on]:bg-slate-800 dark:data-[state=on]:text-slate-50 border border-slate-200 bg-transparent hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-3"
+          data-radix-collection-item=""
+          data-state="off"
+          role="radio"
+          tabindex="-1"
+          type="button"
+        >
+          WORLD
+        </button>
       </div>
     </div>
     <div
@@ -112,7 +222,7 @@ exports[`App > renders articles with correct styling 1`] = `
       >
         <img
           alt="Title 1"
-          class="w-full h-[200px] object-cover"
+          class="w-full h-[200px] object-cover rounded-t-lg"
           src="https://image.url"
         />
         <div
@@ -163,11 +273,11 @@ exports[`App > renders articles with correct styling 1`] = `
           <p
             class="text-sm text-slate-500 dark:text-slate-400"
           >
-            11633 hours ago 
+            5 hours agoby 
             <span
               class="font-semibold"
             >
-              by Author
+              Author
             </span>
           </p>
         </div>
@@ -177,7 +287,7 @@ exports[`App > renders articles with correct styling 1`] = `
       >
         <img
           alt="Title 2"
-          class="w-full h-[200px] object-cover"
+          class="w-full h-[200px] object-cover rounded-t-lg"
           src="https://image.url"
         />
         <div
@@ -228,11 +338,11 @@ exports[`App > renders articles with correct styling 1`] = `
           <p
             class="text-sm text-slate-500 dark:text-slate-400"
           >
-            11633 hours ago 
+            5 hours agoby 
             <span
               class="font-semibold"
             >
-              by Author
+              Author
             </span>
           </p>
         </div>
@@ -242,7 +352,7 @@ exports[`App > renders articles with correct styling 1`] = `
       >
         <img
           alt="Title 3"
-          class="w-full h-[200px] object-cover"
+          class="w-full h-[200px] object-cover rounded-t-lg"
           src="https://image.url"
         />
         <div
@@ -293,11 +403,11 @@ exports[`App > renders articles with correct styling 1`] = `
           <p
             class="text-sm text-slate-500 dark:text-slate-400"
           >
-            11633 hours ago 
+            5 hours agoby 
             <span
               class="font-semibold"
             >
-              by Author
+              Author
             </span>
           </p>
         </div>
