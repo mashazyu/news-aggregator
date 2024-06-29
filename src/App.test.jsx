@@ -7,6 +7,14 @@ import { wrapper } from "../tests/utils";
 import { articlesMock } from "../tests/mocks";
 import App from "./App";
 
+vi.mock("./lib/utils", async (importOriginal) => {
+  const actual = await importOriginal();
+  return {
+    ...actual,
+    hoursAgo: vi.fn().mockImplementation(() => "5 hours ago"),
+  };
+});
+
 const spy = vi.spyOn(axios, "get");
 const data = {
   status: "success",
@@ -50,7 +58,7 @@ describe("App", () => {
     });
 
     it("when category selection changes", async () => {
-      const category = screen.getByRole("radio", { name: /general/i });
+      const category = screen.getByRole("radio", { name: /business/i });
       await userEvent.click(category);
 
       const url = getLastCalledURL();
@@ -58,7 +66,7 @@ describe("App", () => {
       await waitFor(() => {
         // category search param is updated
         expect(url.searchParams.has("category")).toBe(true);
-        expect(url.searchParams.get("category")).toBe("general");
+        expect(url.searchParams.get("category")).toBe("business");
         // category selection changes
         expect(category).toBeChecked();
       });

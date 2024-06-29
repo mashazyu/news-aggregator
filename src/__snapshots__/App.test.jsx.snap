@@ -29,7 +29,51 @@ exports[`App > renders articles with correct styling 1`] = `
           tabindex="-1"
           type="button"
         >
+          TOP
+        </button>
+        <button
+          aria-checked="false"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-slate-100 data-[state=on]:text-slate-900 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:data-[state=on]:bg-slate-800 dark:data-[state=on]:text-slate-50 border border-slate-200 bg-transparent hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-3"
+          data-radix-collection-item=""
+          data-state="off"
+          role="radio"
+          tabindex="-1"
+          type="button"
+        >
           BUSINESS
+        </button>
+        <button
+          aria-checked="false"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-slate-100 data-[state=on]:text-slate-900 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:data-[state=on]:bg-slate-800 dark:data-[state=on]:text-slate-50 border border-slate-200 bg-transparent hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-3"
+          data-radix-collection-item=""
+          data-state="off"
+          role="radio"
+          tabindex="-1"
+          type="button"
+        >
+          CRIME
+        </button>
+        <button
+          aria-checked="false"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-slate-100 data-[state=on]:text-slate-900 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:data-[state=on]:bg-slate-800 dark:data-[state=on]:text-slate-50 border border-slate-200 bg-transparent hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-3"
+          data-radix-collection-item=""
+          data-state="off"
+          role="radio"
+          tabindex="-1"
+          type="button"
+        >
+          DOMESTIC
+        </button>
+        <button
+          aria-checked="false"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-slate-100 data-[state=on]:text-slate-900 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:data-[state=on]:bg-slate-800 dark:data-[state=on]:text-slate-50 border border-slate-200 bg-transparent hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-3"
+          data-radix-collection-item=""
+          data-state="off"
+          role="radio"
+          tabindex="-1"
+          type="button"
+        >
+          EDUCATION
         </button>
         <button
           aria-checked="false"
@@ -51,7 +95,18 @@ exports[`App > renders articles with correct styling 1`] = `
           tabindex="-1"
           type="button"
         >
-          GENERAL
+          ENVIRONMENT
+        </button>
+        <button
+          aria-checked="false"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-slate-100 data-[state=on]:text-slate-900 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:data-[state=on]:bg-slate-800 dark:data-[state=on]:text-slate-50 border border-slate-200 bg-transparent hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-3"
+          data-radix-collection-item=""
+          data-state="off"
+          role="radio"
+          tabindex="-1"
+          type="button"
+        >
+          FOOD
         </button>
         <button
           aria-checked="false"
@@ -63,6 +118,39 @@ exports[`App > renders articles with correct styling 1`] = `
           type="button"
         >
           HEALTH
+        </button>
+        <button
+          aria-checked="false"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-slate-100 data-[state=on]:text-slate-900 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:data-[state=on]:bg-slate-800 dark:data-[state=on]:text-slate-50 border border-slate-200 bg-transparent hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-3"
+          data-radix-collection-item=""
+          data-state="off"
+          role="radio"
+          tabindex="-1"
+          type="button"
+        >
+          LIFESTYLE
+        </button>
+        <button
+          aria-checked="false"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-slate-100 data-[state=on]:text-slate-900 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:data-[state=on]:bg-slate-800 dark:data-[state=on]:text-slate-50 border border-slate-200 bg-transparent hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-3"
+          data-radix-collection-item=""
+          data-state="off"
+          role="radio"
+          tabindex="-1"
+          type="button"
+        >
+          OTHER
+        </button>
+        <button
+          aria-checked="false"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-slate-100 data-[state=on]:text-slate-900 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:data-[state=on]:bg-slate-800 dark:data-[state=on]:text-slate-50 border border-slate-200 bg-transparent hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-3"
+          data-radix-collection-item=""
+          data-state="off"
+          role="radio"
+          tabindex="-1"
+          type="button"
+        >
+          POLITICS
         </button>
         <button
           aria-checked="false"
@@ -97,6 +185,28 @@ exports[`App > renders articles with correct styling 1`] = `
         >
           TECHNOLOGY
         </button>
+        <button
+          aria-checked="false"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-slate-100 data-[state=on]:text-slate-900 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:data-[state=on]:bg-slate-800 dark:data-[state=on]:text-slate-50 border border-slate-200 bg-transparent hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-3"
+          data-radix-collection-item=""
+          data-state="off"
+          role="radio"
+          tabindex="-1"
+          type="button"
+        >
+          TOURISM
+        </button>
+        <button
+          aria-checked="false"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-slate-100 data-[state=on]:text-slate-900 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:data-[state=on]:bg-slate-800 dark:data-[state=on]:text-slate-50 border border-slate-200 bg-transparent hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-3"
+          data-radix-collection-item=""
+          data-state="off"
+          role="radio"
+          tabindex="-1"
+          type="button"
+        >
+          WORLD
+        </button>
       </div>
     </div>
     <div
@@ -110,109 +220,196 @@ exports[`App > renders articles with correct styling 1`] = `
       <div
         class="rounded-lg border border-slate-200 bg-white text-slate-950 shadow-sm dark:border-slate-800 dark:bg-slate-950 dark:text-slate-50 flex flex-col justify-between"
       >
+        <img
+          alt="Title 1"
+          class="w-full h-[200px] object-cover rounded-t-lg"
+          src="https://image.url"
+        />
         <div
           class="flex flex-col space-y-1.5 p-6"
         >
+          <a
+            class="hover:underline "
+            href="https://source.url"
+            target="_blank"
+          >
+            <div
+              class="flex"
+            >
+              <span
+                class="relative flex shrink-0 overflow-hidden w-5 h-5 mr-2 rounded-none"
+              />
+              <p
+                class="text-sm text-slate-500 dark:text-slate-400"
+              >
+                sourceId
+              </p>
+            </div>
+          </a>
           <h3
             class="text-2xl font-semibold leading-none tracking-tight"
           >
             Title 1
           </h3>
-          <p
-            class="text-sm text-slate-500 dark:text-slate-400"
+          <div
+            class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 border-transparent bg-slate-900 text-slate-50 hover:bg-slate-900/80 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-50/80 max-w-min"
           >
-            by Author
-          </p>
+            sport
+          </div>
         </div>
-        <div
-          class="p-6 pt-0"
+        <a
+          href="https://mock.url"
+          target="_blank"
         >
-          <p>
+          <div
+            class="p-6 pt-0 break-all"
+          >
             Description
-          </p>
-        </div>
+          </div>
+        </a>
         <div
           class="flex items-center p-6 pt-0"
         >
-          <a
-            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 bg-slate-100 text-slate-900 hover:bg-slate-100/80 dark:bg-slate-800 dark:text-slate-50 dark:hover:bg-slate-800/80 h-10 px-4 py-2"
-            href="https://mock.url"
-            target="_blank"
+          <p
+            class="text-sm text-slate-500 dark:text-slate-400"
           >
-            Learn more
-          </a>
+            5 hours agoby 
+            <span
+              class="font-semibold"
+            >
+              Author
+            </span>
+          </p>
         </div>
       </div>
       <div
         class="rounded-lg border border-slate-200 bg-white text-slate-950 shadow-sm dark:border-slate-800 dark:bg-slate-950 dark:text-slate-50 flex flex-col justify-between"
       >
+        <img
+          alt="Title 2"
+          class="w-full h-[200px] object-cover rounded-t-lg"
+          src="https://image.url"
+        />
         <div
           class="flex flex-col space-y-1.5 p-6"
         >
+          <a
+            class="hover:underline "
+            href="https://source.url"
+            target="_blank"
+          >
+            <div
+              class="flex"
+            >
+              <span
+                class="relative flex shrink-0 overflow-hidden w-5 h-5 mr-2 rounded-none"
+              />
+              <p
+                class="text-sm text-slate-500 dark:text-slate-400"
+              >
+                sourceId
+              </p>
+            </div>
+          </a>
           <h3
             class="text-2xl font-semibold leading-none tracking-tight"
           >
             Title 2
           </h3>
-          <p
-            class="text-sm text-slate-500 dark:text-slate-400"
+          <div
+            class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 border-transparent bg-slate-900 text-slate-50 hover:bg-slate-900/80 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-50/80 max-w-min"
           >
-            by Author
-          </p>
+            sport
+          </div>
         </div>
-        <div
-          class="p-6 pt-0"
+        <a
+          href="https://mock.url"
+          target="_blank"
         >
-          <p>
+          <div
+            class="p-6 pt-0 break-all"
+          >
             Description
-          </p>
-        </div>
+          </div>
+        </a>
         <div
           class="flex items-center p-6 pt-0"
         >
-          <a
-            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 bg-slate-100 text-slate-900 hover:bg-slate-100/80 dark:bg-slate-800 dark:text-slate-50 dark:hover:bg-slate-800/80 h-10 px-4 py-2"
-            href="https://mock.url"
-            target="_blank"
+          <p
+            class="text-sm text-slate-500 dark:text-slate-400"
           >
-            Learn more
-          </a>
+            5 hours agoby 
+            <span
+              class="font-semibold"
+            >
+              Author
+            </span>
+          </p>
         </div>
       </div>
       <div
         class="rounded-lg border border-slate-200 bg-white text-slate-950 shadow-sm dark:border-slate-800 dark:bg-slate-950 dark:text-slate-50 flex flex-col justify-between"
       >
+        <img
+          alt="Title 3"
+          class="w-full h-[200px] object-cover rounded-t-lg"
+          src="https://image.url"
+        />
         <div
           class="flex flex-col space-y-1.5 p-6"
         >
+          <a
+            class="hover:underline "
+            href="https://source.url"
+            target="_blank"
+          >
+            <div
+              class="flex"
+            >
+              <span
+                class="relative flex shrink-0 overflow-hidden w-5 h-5 mr-2 rounded-none"
+              />
+              <p
+                class="text-sm text-slate-500 dark:text-slate-400"
+              >
+                sourceId
+              </p>
+            </div>
+          </a>
           <h3
             class="text-2xl font-semibold leading-none tracking-tight"
           >
             Title 3
           </h3>
-          <p
-            class="text-sm text-slate-500 dark:text-slate-400"
+          <div
+            class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 border-transparent bg-slate-900 text-slate-50 hover:bg-slate-900/80 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-50/80 max-w-min"
           >
-            by Author
-          </p>
+            sport
+          </div>
         </div>
-        <div
-          class="p-6 pt-0"
+        <a
+          href="https://mock.url"
+          target="_blank"
         >
-          <p>
+          <div
+            class="p-6 pt-0 break-all"
+          >
             Description
-          </p>
-        </div>
+          </div>
+        </a>
         <div
           class="flex items-center p-6 pt-0"
         >
-          <a
-            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 bg-slate-100 text-slate-900 hover:bg-slate-100/80 dark:bg-slate-800 dark:text-slate-50 dark:hover:bg-slate-800/80 h-10 px-4 py-2"
-            href="https://mock.url"
-            target="_blank"
+          <p
+            class="text-sm text-slate-500 dark:text-slate-400"
           >
-            Learn more
-          </a>
+            5 hours agoby 
+            <span
+              class="font-semibold"
+            >
+              Author
+            </span>
+          </p>
         </div>
       </div>
     </div>
