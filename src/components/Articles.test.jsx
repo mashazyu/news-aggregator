@@ -24,6 +24,16 @@ const data = {
   ],
 };
 
+const dataNoResults = {
+  pages: [
+    {
+      status: "success",
+      totalResults: 0,
+      results: [],
+    },
+  ],
+};
+
 describe("Articles", () => {
   describe("are rendered", () => {
     beforeEach(() => {
@@ -109,6 +119,25 @@ describe("Articles", () => {
 
       await waitFor(() =>
         expect(screen.getByText("Loading more...")).toBeInTheDocument()
+      );
+    });
+  });
+
+  describe("when 0 articles are returned", () => {
+    beforeEach(() => {
+      useInfiniteQuery.mockReturnValue({
+        data: dataNoResults,
+        isFetchingNextPage: false,
+        fetchNextPage: vi.fn(),
+      });
+
+      render(<Articles category="business" query="" />, { wrapper });
+    });
+
+    it("no articles found message is rendered", async () => {
+      // wait till articles are rendered
+      await waitFor(() =>
+        expect(screen.getByText("No articles found.")).toBeInTheDocument()
       );
     });
   });
