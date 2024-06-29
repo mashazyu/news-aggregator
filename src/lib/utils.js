@@ -10,7 +10,7 @@ export const isCreatorAvailable = (creator) => {
 };
 
 export const getCreator = (creator) => {
-  return isCreatorAvailable(creator) ? `by ${creator[0]}` : "";
+  return isCreatorAvailable(creator) ? creator[0] : "";
 };
 
 export const hoursAgo = (dateString) => {

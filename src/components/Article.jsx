@@ -11,7 +11,12 @@ import {
 } from "@/components/ui/card";
 import Source from "./Source";
 
-import { hoursAgo, getCreator, limitChars } from "../lib/utils";
+import {
+  hoursAgo,
+  isCreatorAvailable,
+  getCreator,
+  limitChars,
+} from "../lib/utils";
 
 function Article({ article }) {
   const {
@@ -61,7 +66,11 @@ function Article({ article }) {
       <CardFooter>
         <CardDescription>
           {`${hoursAgo(pubDate)}`}
-          <span className="font-semibold">{`${getCreator(creator)}`}</span>
+          {isCreatorAvailable(creator) && (
+            <>
+              by <span className="font-semibold">{getCreator(creator)}</span>
+            </>
+          )}
         </CardDescription>
       </CardFooter>
     </Card>
