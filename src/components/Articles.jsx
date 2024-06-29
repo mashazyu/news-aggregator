@@ -4,7 +4,9 @@ import { useInfiniteQuery } from "@tanstack/react-query";
 import { Button } from "./ui/button";
 
 import Article from "./Article";
+import Error from "./Error";
 import Loader from "./Loader";
+import NoResults from "./NoResults";
 
 import { getArticles } from "../api/articles";
 
@@ -29,14 +31,11 @@ function Articles({ category, query }) {
   return status === "pending" ? (
     <Loader />
   ) : status === "error" ? (
-    <div className="pt-16">
-      <p role="alert" className="error-message text-sm text-red-500 mt-1">
-        Error: {error.message}
-      </p>
-    </div>
+    <Error message={error.message} />
   ) : (
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 py-8">
+        {data.pages[0]?.totalResults === 0 && <NoResults />}
         {data.pages.map((currentPage) => {
           return currentPage.results.map((article) => (
             <Article article={article} key={article.article_id} />
