@@ -25,7 +25,7 @@ describe("getCreator()", () => {
     ${undefined}   | ${""}
     ${[]}          | ${""}
     ${[""]}        | ${""}
-    ${["creator"]} | ${"by creator"}
+    ${["creator"]} | ${"creator"}
   `(
     "if creator value is $creator, function returns $result",
     ({ creator, result }) => {
