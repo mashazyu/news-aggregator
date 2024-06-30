@@ -1,10 +1,12 @@
 import { Skeleton } from "@/components/ui/skeleton";
 import { Card, CardFooter, CardHeader } from "@/components/ui/card";
 
+import ImageFallback from "./ImageFallback";
+
 function SkeletonCard() {
   return (
     <Card className="flex flex-col justify-between">
-      <div className="w-full h-[200px] bg-gray-100 rounded-t-lg flex items-center justify-center"></div>
+      <ImageFallback />
       <CardHeader>
         <Skeleton className="h-16 flex-grow" />
         <Skeleton className="h-4 flex-grow" />

@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/card";
 import Source from "./Source";
 import CustomImage from "./CustomImage";
+import ImageFallback from "./ImageFallback";
 
 import {
   hoursAgo,
@@ -18,18 +19,6 @@ import {
   getCreator,
   limitChars,
 } from "../lib/utils";
-
-const Fallback = ({ text = "" }) => {
-  return (
-    <div className="w-full h-[200px] bg-gray-200 rounded-t-lg flex items-center justify-center text-gray-500">
-      {text}
-    </div>
-  );
-};
-
-Fallback.propTypes = {
-  text: PropTypes.string,
-};
 
 const Article = ({ article }) => {
   const {
@@ -51,7 +40,7 @@ const Article = ({ article }) => {
       <CustomImage
         src={imageUrl}
         alt={title}
-        FallbackComponent={Fallback}
+        FallbackComponent={ImageFallback}
         className="w-full h-[200px] object-cover rounded-t-lg"
       />
 
