@@ -10,6 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Source from "./Source";
+import ArticleImage from "./ArticleImage";
 
 import {
   hoursAgo,
@@ -35,17 +36,11 @@ function Article({ article }) {
 
   return (
     <Card className="flex flex-col justify-between">
-      {imageUrl ? (
-        <img
-          src={imageUrl}
-          alt={title}
-          className="w-full h-[200px] object-cover rounded-t-lg"
-        />
-      ) : (
-        <div className="w-full h-[200px] bg-gray-200 rounded-t-lg flex items-center justify-center text-gray-500">
-          No image available
-        </div>
-      )}
+      <ArticleImage
+        src={imageUrl}
+        alt={title}
+        className="w-full h-[200px] object-cover rounded-t-lg"
+      />
 
       <CardHeader>
         <Source id={sourceId} icon={sourceIcon} url={sourceUrl} />
