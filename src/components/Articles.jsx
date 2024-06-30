@@ -10,7 +10,7 @@ import NoResults from "./NoResults";
 
 import { getArticles } from "../api/articles";
 
-function Articles({ category, query }) {
+function Articles({ category, language, query }) {
   const {
     data,
     error,
@@ -19,9 +19,9 @@ function Articles({ category, query }) {
     isFetchingNextPage,
     status,
   } = useInfiniteQuery({
-    queryKey: ["articles", category, query],
+    queryKey: ["articles", category, language, query],
     queryFn: ({ pageParam }) =>
-      getArticles({ category, page: pageParam, query }),
+      getArticles({ category, language, page: pageParam, query }),
     initialPageParam: 0,
     getNextPageParam: (lastPage) => {
       return lastPage.nextPage;
@@ -56,6 +56,7 @@ function Articles({ category, query }) {
 
 Articles.propTypes = {
   category: PropTypes.string.isRequired,
+  language: PropTypes.string,
   query: PropTypes.string,
 };
 

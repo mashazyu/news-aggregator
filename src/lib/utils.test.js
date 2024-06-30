@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 
-import { getCreator, hoursAgo, isCreatorAvailable, limitChars } from "./utils";
+import { getCreator, timeAgo, isCreatorAvailable, limitChars } from "./utils";
 
 describe("isCreatorAvailable()", () => {
   it.each`
@@ -34,7 +34,7 @@ describe("getCreator()", () => {
   );
 });
 
-describe("hoursAgo()", () => {
+describe("timeAgo()", () => {
   it.each`
     dateString          | result
     ${null}             | ${""}
@@ -43,12 +43,18 @@ describe("hoursAgo()", () => {
   `(
     "if dateString value is $dateString, function returns $result",
     ({ dateString, result }) => {
-      expect(hoursAgo(dateString)).toEqual(result);
+      expect(timeAgo(dateString)).toEqual(result);
     }
   );
 
   it("if dateString contains valid date, function returns correct wording", () => {
-    expect(hoursAgo("2023-02-30")).toContain("hours ago");
+    const now = new Date();
+    expect(timeAgo(now.toString())).toContain("minutes");
+
+    const twelveHoursAgo = new Date(Date.now() - 12 * 60 * 60 * 1000);
+    expect(timeAgo(twelveHoursAgo.toString())).toContain("hours");
+
+    expect(timeAgo("2023-02-30")).toContain("days");
   });
 });
 

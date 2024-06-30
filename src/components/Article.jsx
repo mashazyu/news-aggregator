@@ -14,7 +14,7 @@ import CustomImage from "./CustomImage";
 import ImageFallback from "./ImageFallback";
 
 import {
-  hoursAgo,
+  timeAgo,
   isCreatorAvailable,
   getCreator,
   limitChars,
@@ -22,11 +22,10 @@ import {
 
 const Article = ({ article }) => {
   const {
-    article_id: id,
-    category,
     creator,
     description,
     image_url: imageUrl,
+    keywords,
     link,
     pubDate,
     source_id: sourceId,
@@ -47,10 +46,19 @@ const Article = ({ article }) => {
       <CardHeader>
         <Source id={sourceId} icon={sourceIcon} url={sourceUrl} />
         <CardTitle>{title}</CardTitle>
-        {category?.length > 0 && (
-          <Badge key={category + id} className="max-w-min">
-            {category}
-          </Badge>
+        {keywords?.length > 0 && (
+          <div className="flex flex-row flex-wrap">
+            {keywords.map((keyword, i) => {
+              return (
+                <Badge
+                  key={keyword + i}
+                  className="max-w-min whitespace-nowrap mr-2"
+                >
+                  {keyword}
+                </Badge>
+              );
+            })}
+          </div>
         )}
       </CardHeader>
 
@@ -62,7 +70,7 @@ const Article = ({ article }) => {
 
       <CardFooter>
         <CardDescription>
-          {`${hoursAgo(pubDate)}`}
+          {`${timeAgo(pubDate)}`}
           {isCreatorAvailable(creator) && (
             <>
               by <span className="font-semibold">{getCreator(creator)}</span>
@@ -76,11 +84,10 @@ const Article = ({ article }) => {
 
 Article.propTypes = {
   article: PropTypes.shape({
-    article_id: PropTypes.string,
-    category: PropTypes.array,
     creator: PropTypes.array,
     description: PropTypes.string,
     image_url: PropTypes.string,
+    keywords: PropTypes.array,
     link: PropTypes.string,
     pubDate: PropTypes.string,
     source_icon: PropTypes.string,

@@ -14,7 +14,7 @@ describe("Article", () => {
     ).toBeInTheDocument();
     expect(screen.getByText(articleMock.title)).toBeInTheDocument();
     expect(screen.getByText(articleMock.description)).toBeInTheDocument();
-    expect(screen.getByText(articleMock.category[0])).toBeInTheDocument();
+    expect(screen.getByText(articleMock.keywords[0])).toBeInTheDocument();
 
     // renders correct links
     const links = screen.getAllByRole("link");
