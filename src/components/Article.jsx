@@ -10,6 +10,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Source from "./Source";
+import CustomImage from "./CustomImage";
+import ImageFallback from "./ImageFallback";
 
 import {
   hoursAgo,
@@ -18,7 +20,7 @@ import {
   limitChars,
 } from "../lib/utils";
 
-function Article({ article }) {
+const Article = ({ article }) => {
   const {
     article_id: id,
     category,
@@ -35,17 +37,12 @@ function Article({ article }) {
 
   return (
     <Card className="flex flex-col justify-between">
-      {imageUrl ? (
-        <img
-          src={imageUrl}
-          alt={title}
-          className="w-full h-[200px] object-cover rounded-t-lg"
-        />
-      ) : (
-        <div className="w-full h-[200px] bg-gray-200 rounded-t-lg flex items-center justify-center text-gray-500">
-          No image available
-        </div>
-      )}
+      <CustomImage
+        src={imageUrl}
+        alt={title}
+        FallbackComponent={ImageFallback}
+        className="w-full h-[200px] object-cover rounded-t-lg"
+      />
 
       <CardHeader>
         <Source id={sourceId} icon={sourceIcon} url={sourceUrl} />
@@ -75,7 +72,7 @@ function Article({ article }) {
       </CardFooter>
     </Card>
   );
-}
+};
 
 Article.propTypes = {
   article: PropTypes.shape({
