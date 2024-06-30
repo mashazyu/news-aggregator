@@ -14,7 +14,7 @@ import CustomImage from "./CustomImage";
 import ImageFallback from "./ImageFallback";
 
 import {
-  hoursAgo,
+  timeAgo,
   isCreatorAvailable,
   getCreator,
   limitChars,
@@ -34,7 +34,7 @@ const Article = ({ article }) => {
     source_url: sourceUrl,
     title,
   } = article;
-
+  console.log("// article ", article);
   return (
     <Card className="flex flex-col justify-between">
       <CustomImage
@@ -62,7 +62,7 @@ const Article = ({ article }) => {
 
       <CardFooter>
         <CardDescription>
-          {`${hoursAgo(pubDate)}`}
+          {`${timeAgo(pubDate)}`}
           {isCreatorAvailable(creator) && (
             <>
               by <span className="font-semibold">{getCreator(creator)}</span>

@@ -11,7 +11,7 @@ vi.mock("./lib/utils", async (importOriginal) => {
   const actual = await importOriginal();
   return {
     ...actual,
-    hoursAgo: vi.fn().mockImplementation(() => "5 hours ago"),
+    timeAgo: vi.fn().mockImplementation(() => "5 hours ago"),
   };
 });
 

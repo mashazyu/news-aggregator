@@ -13,7 +13,7 @@ export const getCreator = (creator) => {
   return isCreatorAvailable(creator) ? creator[0] : "";
 };
 
-export const hoursAgo = (dateString) => {
+export const timeAgo = (dateString) => {
   if (!dateString || isNaN(Date.parse(dateString))) return "";
 
   const eventDate = new Date(dateString);
