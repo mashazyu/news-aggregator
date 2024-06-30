@@ -2,7 +2,7 @@ import axios from "axios";
 
 import { ENDPOINT, API_KEY } from "../constants";
 
-export const getArticles = async ({ category, page, query }) => {
+export const getArticles = async ({ category, language, page, query }) => {
   const url = new URL(ENDPOINT);
   const params = new URLSearchParams({
     category,
@@ -10,6 +10,7 @@ export const getArticles = async ({ category, page, query }) => {
 
   if (query) params.append("q", query);
   if (page) params.append("page", page);
+  if (language !== "") params.append("language", language);
 
   url.search = params.toString();
 
