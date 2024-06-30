@@ -1,20 +1,8 @@
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 
-const Fallback = ({ text = "" }) => {
-  return (
-    <div className="w-full h-[200px] bg-gray-200 rounded-t-lg flex items-center justify-center text-gray-500">
-      {text}
-    </div>
-  );
-};
-
-Fallback.propTypes = {
-  text: PropTypes.string,
-};
-
-const ArticleImage = (props) => {
-  const { src, alt, ...rest } = props;
+const CustomImage = (props) => {
+  const { src, alt, FallbackComponent, ...rest } = props;
   const [error, setError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -30,7 +18,7 @@ const ArticleImage = (props) => {
     };
   }, [src]);
 
-  if (error || !src) return <Fallback text="No image available" />;
+  if (error || !src) return <FallbackComponent text="No image available" />;
 
   return isLoaded ? (
     <img
@@ -41,13 +29,14 @@ const ArticleImage = (props) => {
       onError={() => setError(true)}
     />
   ) : (
-    <Fallback />
+    <FallbackComponent />
   );
 };
 
-ArticleImage.propTypes = {
+CustomImage.propTypes = {
   alt: PropTypes.string,
+  FallbackComponent: PropTypes.func,
   src: PropTypes.string,
 };
 
-export default ArticleImage;
+export default CustomImage;
