@@ -48,7 +48,13 @@ describe("hoursAgo()", () => {
   );
 
   it("if dateString contains valid date, function returns correct wording", () => {
-    expect(hoursAgo("2023-02-30")).toContain("hours ago");
+    const now = new Date();
+    expect(hoursAgo(now.toString())).toContain("minutes");
+
+    const twelveHoursAgo = new Date(Date.now() - 12 * 60 * 60 * 1000);
+    expect(hoursAgo(twelveHoursAgo.toString())).toContain("hours");
+
+    expect(hoursAgo("2023-02-30")).toContain("days");
   });
 });
 

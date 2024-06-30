@@ -20,10 +20,12 @@ export const hoursAgo = (dateString) => {
   const now = new Date();
   const diffInMs = now - eventDate;
   const hours = Math.floor(diffInMs / (1000 * 60 * 60));
+  const days = Math.floor(hours / 24);
 
-  return hours > 0
-    ? `${hours} hours ago `
-    : `${diffInMs / (1000 * 60)} minutes ago `;
+  if (days > 0) return `${days} days ago `;
+  if (hours > 0) return `${hours} hours ago `;
+
+  return `${diffInMs / (1000 * 60)} minutes ago `;
 };
 
 export const limitChars = (text, limit = 150) => {
