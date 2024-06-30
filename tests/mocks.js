@@ -1,6 +1,6 @@
 export const articleMock = {
   article_id: "123",
-  category: ["sport"],
+  keywords: ["sport", "football"],
   creator: ["Author"],
   image_url: "https://image.url",
   description: "Description",
