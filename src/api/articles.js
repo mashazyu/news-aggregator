@@ -6,7 +6,6 @@ export const getArticles = async ({ category, page, query }) => {
   const url = new URL(ENDPOINT);
   const params = new URLSearchParams({
     category,
-    country: "de",
   });
 
   if (query) params.append("q", query);
