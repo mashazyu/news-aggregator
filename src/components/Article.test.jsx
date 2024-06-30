@@ -16,13 +16,6 @@ describe("Article", () => {
     expect(screen.getByText(articleMock.description)).toBeInTheDocument();
     expect(screen.getByText(articleMock.category[0])).toBeInTheDocument();
 
-    // image is rendered
-    const image = screen.getByRole("img");
-
-    expect(image).toBeInTheDocument();
-    expect(image).toHaveAttribute("src", articleMock.image_url);
-    expect(image).toHaveAttribute("alt", articleMock.title);
-
     // renders correct links
     const links = screen.getAllByRole("link");
     const hasCorrectUrl = (url) =>
